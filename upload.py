@@ -4,7 +4,7 @@ import shutil
 import subprocess
 
 # Configuration
-WATCH_FOLDER = "/home/nziza/Pictures/Webcam"  # Folder to monitor for new pictures from my cheese app
+WATCH_FOLDER = "/home/alain/Pictures/Webcam"  # Folder to monitor for new pictures from my cheese app
 UPLOADED_FOLDER = "./uploaded"  # Folder to move uploaded pictures
 UPLOAD_URL = "https://projects.benax.rw/f/o/r/e/a/c/h/p/r/o/j/e/c/t/s/4e8d42b606f70fa9d39741a93ed0356c/iot_testing_202501/upload.php"
 ATTRIBUTE = "imageFile"  # Key attribute for the curl command
@@ -14,7 +14,7 @@ UPLOAD_INTERVAL = 30  # Time to wait before uploading each file (in seconds)
 os.makedirs(UPLOADED_FOLDER, exist_ok=True)
 
 def upload_image(file_path):
-    """Uploads an image using curl and returns the success status."""
+    """Uploads the image using curl and returns the success status."""
     try:
         command = [
             "curl", "-X", "POST",
